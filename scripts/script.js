@@ -1,12 +1,23 @@
 //Javascript portion of my type game
 const legendsType = {};
 let arrayOfIndividualCharacters = [];
+let wordGen;
 
 legendsType.easyMode = ['yuck', 'zeal', 'zoic', 'abys', 'aced', 'aced', 'acro', 'ditt', 'door', 'flex', 'wave'];
 
 //I will need a function for a random number generator to display the total amount of words in my game
 legendsType.randomNumberGen = function () {
+    return Math.floor(Math.random() * 11);
+}
 
+legendsType.start = function(){
+    $('.start-game').on('click',function(event){
+    // e.preventDefault();
+    wordGen = legendsType.randomNumberGen();
+    console.log (wordGen)
+    legendsType.currentIndividualLetterSplitter(legendsType.easyMode[wordGen]);
+
+    })
 }
 
 //I need a function to split each word of my array in to an array of chacters
@@ -29,6 +40,9 @@ legendsType.keyPressed = function () {
         let keyLetter = event.which;
         console.log(event.which);
         $('.user-typed-letter').html(`<h2 class="">${keyLetter}</h2>`);
+        
+        
+
     })
 }
 
@@ -42,7 +56,8 @@ legendsType.keyPressed = function () {
 
 $(function () {
 
-    legendsType.currentIndividualLetterSplitter();
+    legendsType.start();
+    // legendsType.currentIndividualLetterSplitter(legendsType.easyMode[wordGen]);
     legendsType.keyPressed();
 
 });
