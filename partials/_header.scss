@@ -1,0 +1,11 @@
+header{
+    background-color:yellow;
+    height:10vh;
+    @extend %flex-enable-column;
+    @extend %one-hundo-full;
+    justify-content:center;
+    align-items:center;
+    div{
+        @extend %flex-enable-row;
+    }
+}

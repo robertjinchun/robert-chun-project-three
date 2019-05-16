@@ -1,0 +1,61 @@
+main {
+    background-color: purple;
+    height: 85vh;
+    @extend %flex-enable-column;
+    @extend %one-hundo-full;
+    justify-content: center;
+    align-items: center;
+
+    .wrapper {
+        @extend %max-width-declaration;
+        border: 3px solid orange;
+        @extend %flex-enable-column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .required-keys {
+        @extend %flex-enable-row;
+        @extend %one-hundo-full;
+        justify-content: space-around;
+        align-items: center;
+        padding: 5% 0 5% 0;
+        border: 3px solid black;
+
+        div {
+            width: 100px;
+            height: 100px;
+            border: 3px solid blue;
+        }
+    }
+
+    .user-input-keys {
+        @extend %flex-enable-row;
+        @extend %one-hundo-full;
+        justify-content: center;
+        padding: 5% 0 5% 0;
+        border: 3px solid black;
+
+        div {
+            width: 100px;
+            height: 100px;
+            border: 3px solid blue;
+        }
+
+    }
+
+    .countdown-timer {
+        @extend %flex-enable-row;
+        @extend %one-hundo-full;
+        justify-content: center;
+        padding: 5% 0 5% 0;
+        border: 3px solid red;
+
+        div {
+            width: 300px;
+            height: 100px;
+            border: 3px solid blue;
+        }
+
+    }
+}
