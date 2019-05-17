@@ -12,6 +12,7 @@ main {
         @extend %flex-enable-column;
         justify-content: center;
         align-items: center;
+        margin-right:5%;
     }
 
     .required-keys {
