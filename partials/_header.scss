@@ -1,11 +1,13 @@
-header{
-    background-color:yellow;
-    height:10vh;
+header {
+    background: linear-gradient(55deg, rgba(218, 224, 242, 1) 50%, rgba(151, 249, 249, 1) 50%);
+    ;
+    height: 100vh;
     @extend %flex-enable-column;
     @extend %one-hundo-full;
-    justify-content:center;
-    align-items:center;
-    div{
+    justify-content: center;
+    align-items: center;
+
+    div {
         @extend %flex-enable-row;
     }
 }

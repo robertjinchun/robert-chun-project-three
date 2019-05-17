@@ -16,16 +16,27 @@
     max-width: 1600px;
 }
 
+%titleFont {
+    font-family: 'Montserrat', sans-serif;
+}
+
+$primaryColor:#353535;
+$secondaryColor:#97f9f9;
+$tertiaryColor:#d6694a;
+$quaternaryColor:#ba1f33;
+$quinaryColor:#efe9e7;
+
 html {
     font-size: 125%;
 }
 
-// body {
-//     @extend %one-hundo-full;
-//     @extend %flex-enable-column;
-//     align-items:center;
-//     justify-content:center;
-// }
+
+body {
+    @extend %one-hundo-full;
+    @extend %flex-enable-row;
+    align-items: center;
+    justify-content: center;
+}
 
 h1,
 h2,
@@ -35,7 +46,57 @@ p,
 a {
     margin: 0;
     padding: 0;
-    color: black;
+    color: $secondaryColor;
+    @extend %titleFont;
     text-decoration: none;
     list-style-type: none;
+}
+
+h1 {
+    // @extend %titleFont;
+    font-size: 6rem;
+
+    .typeTitle1,
+    .typeTitle2,
+    .typeTitle3,
+    .typeTitle4 {
+        color: $quaternaryColor;
+        text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+        display: inline-block;
+    }
+
+    .cursiveTitle {
+        color: $tertiaryColor;
+        text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    .typeTitle2 {
+        transform: translatey(20px);
+    }
+
+    .typeTitle3 {
+        transform: translatey(-10px);
+    }
+
+    .typeTitle4 {
+        transform: translatey(25px);
+    }
+}
+
+h2 {
+    color: $primaryColor;
+    font-size: 4rem;
+}
+
+h3 {
+    color: $primaryColor;
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 3.5rem;
+    color: $primaryColor;
+    // text-shadow: 10px 10px 0px #ba1f33, 5px 5px 0px #d6694a;
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+
 }

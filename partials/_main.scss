@@ -1,6 +1,6 @@
 main {
-    background-color: purple;
-    height: 85vh;
+    background-color: $secondaryColor;
+    height: 100vh;
     @extend %flex-enable-column;
     @extend %one-hundo-full;
     justify-content: center;
@@ -8,7 +8,7 @@ main {
 
     .wrapper {
         @extend %max-width-declaration;
-        border: 3px solid orange;
+        border: 8px solid $tertiaryColor;
         @extend %flex-enable-column;
         justify-content: center;
         align-items: center;
@@ -20,12 +20,16 @@ main {
         justify-content: space-around;
         align-items: center;
         padding: 5% 0 5% 0;
-        border: 3px solid black;
+        // border: 3px solid black;
 
         div {
             width: 100px;
             height: 100px;
-            border: 3px solid blue;
+            border: 10px solid $quaternaryColor;
+            @extend %flex-enable-row;
+            justify-content: center;
+            align-items: center;
+            // @extend %one-hundo-full;
         }
     }
 
@@ -34,28 +38,57 @@ main {
         @extend %one-hundo-full;
         justify-content: center;
         padding: 5% 0 5% 0;
-        border: 3px solid black;
+        // border: 3px solid black;
 
         div {
-            width: 100px;
-            height: 100px;
-            border: 3px solid blue;
+            @extend %flex-enable-row;
+            justify-content: center;
+            align-items: center;
+
         }
 
+        .user-typed-letter {
+            width: 100px;
+            height: 100px;
+            margin-left: 2%;
+            border: 10px solid $tertiaryColor;
+
+        }
     }
 
     .countdown-timer {
         @extend %flex-enable-row;
         @extend %one-hundo-full;
-        justify-content: center;
+        justify-content: space-between;
         padding: 5% 0 5% 0;
-        border: 3px solid red;
+        // border: 3px solid red;
 
         div {
-            width: 300px;
-            height: 100px;
-            border: 3px solid blue;
+            // width: 300px;
+            // height: 100px;
+            @extend %flex-enable-row;
+            justify-content: center;
+            align-items: center;
+            // border: 3px solid blue;
         }
 
+        .user-score {
+            width: 120px;
+            height: 120px;
+            margin-right: 2%;
+            border: 10px solid $quaternaryColor;
+        }
+
+        .user-timer {
+            width: 120px;
+            height: 120px;
+            margin-left: 2%;
+            border: 10px solid $quaternaryColor;
+        }
+
+    }
+
+    .start-game:hover {
+        background-color: $quaternaryColor;
     }
 }

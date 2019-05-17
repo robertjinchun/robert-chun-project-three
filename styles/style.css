@@ -179,7 +179,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   overflow: hidden;
 }
 
-header div, main .required-keys, main .user-input-keys, main .countdown-timer {
+body, header div, main .required-keys, main .required-keys div, main .user-input-keys, main .user-input-keys div, main .countdown-timer, main .countdown-timer div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -195,7 +195,7 @@ header, main, main .wrapper {
           flex-direction: column;
 }
 
-header, main, main .required-keys, main .user-input-keys, main .countdown-timer, footer {
+body, header, main, main .required-keys, main .user-input-keys, main .countdown-timer, footer {
   width: 100%;
 }
 
@@ -204,8 +204,26 @@ main .wrapper {
   max-width: 1600px;
 }
 
+h1,
+h2,
+h3,
+h4,
+p,
+a {
+  font-family: 'Montserrat', sans-serif;
+}
+
 html {
   font-size: 125%;
+}
+
+body {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 h1,
@@ -216,14 +234,63 @@ p,
 a {
   margin: 0;
   padding: 0;
-  color: black;
+  color: #97f9f9;
   text-decoration: none;
   list-style-type: none;
 }
 
+h1 {
+  font-size: 6rem;
+}
+
+h1 .typeTitle1,
+h1 .typeTitle2,
+h1 .typeTitle3,
+h1 .typeTitle4 {
+  color: #ba1f33;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+  display: inline-block;
+}
+
+h1 .cursiveTitle {
+  color: #d6694a;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+}
+
+h1 .typeTitle2 {
+  -webkit-transform: translatey(20px);
+          transform: translatey(20px);
+}
+
+h1 .typeTitle3 {
+  -webkit-transform: translatey(-10px);
+          transform: translatey(-10px);
+}
+
+h1 .typeTitle4 {
+  -webkit-transform: translatey(25px);
+          transform: translatey(25px);
+}
+
+h2 {
+  color: #353535;
+  font-size: 4rem;
+}
+
+h3 {
+  color: #353535;
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 3.5rem;
+  color: #353535;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+}
+
 header {
-  background-color: yellow;
-  height: 10vh;
+  background: linear-gradient(55deg, #dae0f2 50%, #97f9f9 50%);
+  height: 100vh;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -233,8 +300,8 @@ header {
 }
 
 main {
-  background-color: purple;
-  height: 85vh;
+  background-color: #97f9f9;
+  height: 100vh;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -244,7 +311,7 @@ main {
 }
 
 main .wrapper {
-  border: 3px solid orange;
+  border: 8px solid #d6694a;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -260,13 +327,18 @@ main .required-keys {
       -ms-flex-align: center;
           align-items: center;
   padding: 5% 0 5% 0;
-  border: 3px solid black;
 }
 
 main .required-keys div {
   width: 100px;
   height: 100px;
-  border: 3px solid blue;
+  border: 10px solid #ba1f33;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main .user-input-keys {
@@ -274,27 +346,56 @@ main .user-input-keys {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 5% 0 5% 0;
-  border: 3px solid black;
 }
 
 main .user-input-keys div {
-  width: 100px;
-  height: 100px;
-  border: 3px solid blue;
-}
-
-main .countdown-timer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .user-input-keys .user-typed-letter {
+  width: 100px;
+  height: 100px;
+  margin-left: 2%;
+  border: 10px solid #d6694a;
+}
+
+main .countdown-timer {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 5% 0 5% 0;
-  border: 3px solid red;
 }
 
 main .countdown-timer div {
-  width: 300px;
-  height: 100px;
-  border: 3px solid blue;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .countdown-timer .user-score {
+  width: 120px;
+  height: 120px;
+  margin-right: 2%;
+  border: 10px solid #ba1f33;
+}
+
+main .countdown-timer .user-timer {
+  width: 120px;
+  height: 120px;
+  margin-left: 2%;
+  border: 10px solid #ba1f33;
+}
+
+main .start-game:hover {
+  background-color: #ba1f33;
 }
 
 footer {

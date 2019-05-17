@@ -4,48 +4,53 @@ const legendsType = {};
 let wordGen;
 let globalTimer;
 
-legendsType.easyMode = ['yuck', 'zeal', 'zoic', 'abys', 'aced', 'aced', 'acro', 'ditt', 'door', 'flex', 'wave'];
+legendsType.easyMode = ['yuck', 'zeal', 'zoic', 'abys', 'aced', 'aced', 'acro', 'ditt', 'door', 'flex', 'wave','alba','alto','quey','dorm','pipy','myna','sean','rear','mare','ruse','gari','klan','line','stew','rima','hern','soda','taal','liao','bull','plur','feta','eats','hide','scan','phon','fozy','mowe','damn','luba','kuyp','phot','eery','tees','areg','huly','bite','calf','deng','bene','chad','nork','dhal','lacy','wide','pogo','dill','king','tabi','ucla'];
+
+
 legendsType.letterCounter = 0;
 legendsType.wordCounter = 0;
 legendsType.currentWord = [];
 //legendsType.timer = 0;
-legendsType.gameTime = 20;
+legendsType.gameTime = 21;
+legendsType.gameStart = false;
+legendsType.totalPoints = 0;
 
 
 //I will need a function for a random number generator to display the total amount of words in my game
 legendsType.randomNumberGen = function () {
-    return Math.floor(Math.random() * 11);
+    return Math.floor(Math.random() * legendsType.easyMode.length);
 }
 
 legendsType.timeCalc = function () {
     let timeTemp;
-    $('.countdown-timer').html(`<h2 class="">${legendsType.gameTime}</h2>`);
+
     legendsType.gameTime--;
-    timeTemp = setTimeout(legendsType.timeCalc,1000);
-    console.log(timeTemp);
-    console.log(legendsType.gameTime);
-    if (legendsType.gameTime < 1){
+    $('.user-timer').html(`<h2 class="">${legendsType.gameTime}</h2>`);
+    timeTemp = setTimeout(legendsType.timeCalc, 1000);
+    //console.log(legendsType.gameStart);
+    //console.log(legendsType.gameTime);
+    if (legendsType.gameTime < 1) {
         clearTimeout(timeTemp);
+        legendsType.gameTime = 21;
+        legendsType.gameStart = false;
+        console.log(legendsType.totalPoints);
+        // legendsType.totalPoints = 0;
+        $('.start-game').show();
+        //console.log()
     }
 }
 
 legendsType.start = function () {
     $('.start-game').on('click', function (event) {
-        // console.log($.now());
-        // e.preventDefault();
+        $('.start-game').hide();
+        legendsType.gameStart = true;
+        legendsType.totalPoints = 0;
+        $('.user-score').html(`<h2 class="">${legendsType.totalPoints}</h2>`);
         wordGen = legendsType.randomNumberGen();
-        // console.log(wordGen)
         legendsType.currentIndividualLetterSplitter(legendsType.easyMode[wordGen]);
-        // return
         legendsType.timeCalc();
-            // $('.count-down').html(`<h2 class="">${legendsType.timer}</h2>`); 
-            
     })
 }
-
-
-
-
 
 //I need a function to split each word of my array in to an array of chacters
 
@@ -58,7 +63,7 @@ legendsType.currentIndividualLetterSplitter = function (currentWord) {
     $('.third-letter').html(`<h2 class="">${arrayOfIndividualCharacters[2]}</h2>`);
     $('.fourth-letter').html(`<h2 class="">${arrayOfIndividualCharacters[3]}</h2>`);
     legendsType.currentWord = arrayOfIndividualCharacters;
-    console.log(legendsType.currentWord);
+    //console.log(legendsType.currentWord);
     return arrayOfIndividualCharacters;
 }
 
@@ -68,26 +73,32 @@ legendsType.currentIndividualLetterSplitter = function (currentWord) {
 legendsType.keyPressed = function () {
     let currentLetter;
     let currentNumber = [];
-    // This event handels all the key presses
+    // This event handels all the key pressesyuckasdkaskdyuck
     $(window).keypress(function (event) {
-        
+
         currentNumber = event.which;
         // console.log(currentNumber[0]);
         currentLetter = String.fromCharCode(event.which);
-        console.log(currentLetter);
-        $('.user-typed-letter').html(`<h2 class="">${currentLetter}</h2>`);
-        console.log(legendsType.currentWord);
-        
-        if (currentLetter === legendsType.currentWord[legendsType.letterCounter]){
-            console.log(`im working`);
-            legendsType.letterCounter++;
-            console.log(legendsType.letterCounter);
-            if (legendsType.letterCounter === 4){
-                legendsType.letterCounter =0
-                wordGen = legendsType.randomNumberGen();
-                legendsType.currentIndividualLetterSplitter(legendsType.easyMode[wordGen]);
+        //console.log(currentLetter);
+
+        //console.log(legendsType.currentWord);
+        if (legendsType.gameStart === true) {
+            $('.user-typed-letter').html(`<h2 class="">${currentLetter}</h2>`);
+            if (currentLetter === legendsType.currentWord[legendsType.letterCounter]) {
+                //console.log(`im working`);
+                legendsType.letterCounter++;
+                // $('.user-score').html(`<h2 class="">${legendsType.letterCounter}</h2>`);
+                //console.log(legendsType.letterCounter);
+                if (legendsType.letterCounter === 4) {
+                    legendsType.totalPoints++;
+                    $('.user-score').html(`<h2 class="">${legendsType.totalPoints}</h2>`);
+                    legendsType.letterCounter = 0;
+                    wordGen = legendsType.randomNumberGen();
+                    legendsType.currentIndividualLetterSplitter(legendsType.easyMode[wordGen]);
+                }
             }
         }
+
     })
     // console.log($keyLetter);
     //return $keyLetter;

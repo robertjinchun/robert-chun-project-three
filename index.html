@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css" />
 </head>
 
@@ -13,7 +15,12 @@
         <!-- Section including the header -->
         <section>
             <div>
-                <h1>Only Legends Type</h1>
+                <h1><span class='typeTitle1'>T</span>
+                    <span class='typeTitle2'>Y</span>
+                    <span class='typeTitle3'>P</span>
+                    <span class='typeTitle4'>E</span>
+                    <br />
+                    <span class='cursiveTitle'>A lot</span></h1>
             </div>
         </section>
     </header>
@@ -22,41 +29,61 @@
             <!-- Section containing individual letters that need to be typed-->
             <section class='required-keys'>
                 <div class='first-letter'>
-                    
+
                 </div>
                 <div class='second-letter'>
                     >
                 </div>
                 <div class='third-letter'>
-                    
+
                 </div>
                 <div class='fourth-letter'>
-                    
+
                 </div>
             </section>
             <!-- Section contains idividual letters typed by user -->
             <section class='user-input-keys'>
+                <div class='userKeyInfo'>
+                    <h3>Last letter typed</h3>
+                </div>
                 <div class='user-typed-letter'>
-                    
+
                 </div>
             </section>
             <!-- This section is the timer count down -->
             <section class='countdown-timer'>
                 <div>
-                    
+                    <div class='user-total-score'>
+                        <h3>Score</h3>
+                    </div>
+                    <div class='user-score'>
+
+                    </div>
                 </div>
+                <div>
+                    <div class='user-timer-info'>
+                        <h3>Timer</h3>
+                    </div>
+                    <div class='user-timer'>
+
+                    </div>
+                </div>
+
             </section>
             <section>
-                <button class='start-game'>start</button>
-                <button class='reset'>reset</button>
+                <!-- <button class='start-game'>start</button> -->
+                <div class='start-game'>
+                    <h4>START</h4>
+                </div>
+                <!-- <button class='reset'>reset</button> -->
             </section>
         </div>
     </main>
-    <footer>
+    <!-- <footer>
 
-    </footer>
+    </footer> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-</script>
+    </script>
     <script src="./scripts/script.js"></script>
 </body>
 
