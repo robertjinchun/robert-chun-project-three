@@ -8,10 +8,25 @@ legendsType.easyMode = ['yuck', 'zeal', 'zoic', 'abys', 'aced', 'aced', 'acro', 
 legendsType.letterCounter = 0;
 legendsType.wordCounter = 0;
 legendsType.currentWord = [];
+//legendsType.timer = 0;
+legendsType.gameTime = 20;
+
 
 //I will need a function for a random number generator to display the total amount of words in my game
 legendsType.randomNumberGen = function () {
     return Math.floor(Math.random() * 11);
+}
+
+legendsType.timeCalc = function () {
+    let timeTemp;
+    $('.countdown-timer').html(`<h2 class="">${legendsType.gameTime}</h2>`);
+    legendsType.gameTime--;
+    timeTemp = setTimeout(legendsType.timeCalc,1000);
+    console.log(timeTemp);
+    console.log(legendsType.gameTime);
+    if (legendsType.gameTime < 1){
+        clearTimeout(timeTemp);
+    }
 }
 
 legendsType.start = function () {
@@ -22,12 +37,15 @@ legendsType.start = function () {
         // console.log(wordGen)
         legendsType.currentIndividualLetterSplitter(legendsType.easyMode[wordGen]);
         // return
+        legendsType.timeCalc();
+            // $('.count-down').html(`<h2 class="">${legendsType.timer}</h2>`); 
+            
     })
 }
 
-legendsType.midGame = function () {
 
-}
+
+
 
 //I need a function to split each word of my array in to an array of chacters
 
