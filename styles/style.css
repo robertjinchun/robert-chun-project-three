@@ -318,12 +318,14 @@ main .wrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 3%;
   margin-right: 5%;
 }
 
 main .required-keys {
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;

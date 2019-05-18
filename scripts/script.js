@@ -89,9 +89,23 @@ legendsType.keyPressed = function () {
                 legendsType.letterCounter++;
                 // $('.user-score').html(`<h2 class="">${legendsType.letterCounter}</h2>`);
                 //console.log(legendsType.letterCounter);
+
+                if (legendsType.letterCounter === 1){
+                    $('.first-letter').css('border-color','#81f499');
+                }
+                if (legendsType.letterCounter === 2) {
+                    $('.second-letter').css('border-color','#81f499');
+                }
+                if (legendsType.letterCounter === 3) {
+                    $('.third-letter').css('border-color','#81f499');
+                }
                 if (legendsType.letterCounter === 4) {
                     legendsType.totalPoints++;
                     $('.user-score').html(`<h2 class="">${legendsType.totalPoints}</h2>`);
+                    $('.first-letter').css('border-color', '#ba1f33');
+                    $('.second-letter').css('border-color', '#ba1f33');
+                    $('.third-letter').css('border-color', '#ba1f33');
+                    $('.fourth-letter').css('border-color', '#ba1f33');
                     legendsType.letterCounter = 0;
                     wordGen = legendsType.randomNumberGen();
                     legendsType.currentIndividualLetterSplitter(legendsType.easyMode[wordGen]);

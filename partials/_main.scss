@@ -12,13 +12,14 @@ main {
         @extend %flex-enable-column;
         justify-content: center;
         align-items: center;
+        padding:3%;
         margin-right:5%;
     }
 
     .required-keys {
         @extend %flex-enable-row;
         @extend %one-hundo-full;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         padding: 5% 0 5% 0;
         // border: 3px solid black;
