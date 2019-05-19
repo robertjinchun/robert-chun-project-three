@@ -4,7 +4,7 @@ const legendsType = {};
 let wordGen;
 let globalTimer;
 
-legendsType.easyMode = ['yuck', 'zeal', 'zoic', 'abys', 'aced', 'aced', 'acro', 'ditt', 'door', 'flex', 'wave','alba','alto','quey','dorm','pipy','myna','sean','rear','mare','ruse','gari','klan','line','stew','rima','hern','soda','taal','liao','bull','plur','feta','eats','hide','scan','phon','fozy','mowe','damn','luba','kuyp','phot','eery','tees','areg','huly','bite','calf','deng','bene','chad','nork','dhal','lacy','wide','pogo','dill','king','tabi','ucla'];
+legendsType.easyMode = ['yuck', 'zeal', 'zoic', 'abys', 'aced', 'aced', 'acro', 'ditt', 'door', 'flex', 'wave', 'alba', 'alto', 'quey', 'dorm', 'pipy', 'myna', 'sean', 'rear', 'mare', 'ruse', 'gari', 'klan', 'line', 'stew', 'rima', 'hern', 'soda', 'taal', 'liao', 'bull', 'plur', 'feta', 'eats', 'hide', 'scan', 'phon', 'fozy', 'mowe', 'damn', 'luba', 'kuyp', 'phot', 'eery', 'tees', 'areg', 'huly', 'bite', 'calf', 'deng', 'bene', 'chad', 'nork', 'dhal', 'lacy', 'wide', 'pogo', 'dill', 'king', 'tabi', 'ucla'];
 
 
 legendsType.letterCounter = 0;
@@ -43,20 +43,24 @@ legendsType.timeCalc = function () {
 
 legendsType.start = function () {
     $('.start-game').on('click', function (event) {
-        setTimeout(function() {
-        $('.start-game').hide();
-        // $('.reset-game').hide();
-        legendsType.gameStart = true;
-        legendsType.totalPoints = 0;
-        $('.user-score').html(`<h2 class="">${legendsType.totalPoints}</h2>`);
-        wordGen = legendsType.randomNumberGen();
-        legendsType.currentIndividualLetterSplitter(legendsType.easyMode[wordGen]);
-        legendsType.timeCalc();
+        setTimeout(function () {
+            $('.start-game').hide();
+            // $('.reset-game').hide();
+            legendsType.gameStart = true;
+            legendsType.totalPoints = 0;
+            $('.user-score').html(`<h2 class="">${legendsType.totalPoints}</h2>`);
+            $('.first-letter').css('border-color', '#ba1f33');
+            $('.second-letter').css('border-color', '#ba1f33');
+            $('.third-letter').css('border-color', '#ba1f33');
+            $('.fourth-letter').css('border-color', '#ba1f33');
+            wordGen = legendsType.randomNumberGen();
+            legendsType.currentIndividualLetterSplitter(legendsType.easyMode[wordGen]);
+            legendsType.timeCalc();
         }, 500);
     })
 }
 
-legendsType.reset = function(){
+legendsType.reset = function () {
     $('.reset-game').on('click', function (event) {
         $('.start-game').show();
         legendsType.gameStart = false;
@@ -107,14 +111,14 @@ legendsType.keyPressed = function () {
                 // $('.user-score').html(`<h2 class="">${legendsType.letterCounter}</h2>`);
                 //console.log(legendsType.letterCounter);
 
-                if (legendsType.letterCounter === 1){
-                    $('.first-letter').css('border-color','#81f499');
+                if (legendsType.letterCounter === 1) {
+                    $('.first-letter').css('border-color', '#81f499');
                 }
                 if (legendsType.letterCounter === 2) {
-                    $('.second-letter').css('border-color','#81f499');
+                    $('.second-letter').css('border-color', '#81f499');
                 }
                 if (legendsType.letterCounter === 3) {
-                    $('.third-letter').css('border-color','#81f499');
+                    $('.third-letter').css('border-color', '#81f499');
                 }
                 if (legendsType.letterCounter === 4) {
                     legendsType.totalPoints++;
