@@ -43,6 +43,7 @@ body {
 .dual-wrapper {
     @extend %one-hundo-full;
     max-width:2000px;
+    // max-height:1136px;
     @extend %flex-enable-row;
     align-items: center;
     justify-content: center;
