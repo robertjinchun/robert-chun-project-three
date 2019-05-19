@@ -6,6 +6,7 @@
     main {
         .main-wrapper {
             margin-right: 0;
+            // height: auto;
         }
     }
 
@@ -15,6 +16,15 @@
 }
 
 @media (max-width:550px) {
+    body {
+        // max-height: 1136px;
+    }
+
+    header {
+        background: linear-gradient(70deg, rgba(218, 224, 242, 1) 50%, rgba(151, 249, 249, 1) 50%);
+        // min-height: 500px;
+    }
+
     h1 {
         // @extend %titleFont;
         font-size: 4rem;
@@ -69,3 +79,10 @@
         }
     }
 }
+
+// @media (max-height:350px) {
+//     header {
+//         height: 100%;
+//     }
+
+// }

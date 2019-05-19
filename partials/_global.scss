@@ -34,16 +34,17 @@ html {
 
 body {
     @extend %one-hundo-full;
-    // min-height:600px;
+    // min-height: 300px;
     @extend %flex-enable-row;
     align-items: center;
     justify-content: center;
+    background: linear-gradient(90deg, rgba(218, 224, 242, 1) 50%, rgba(151, 249, 249, 1) 50%);
 }
 
 .dual-wrapper {
     @extend %one-hundo-full;
-    max-width:2000px;
-    // max-height:1136px;
+    max-width: 2000px;
+    // height: 100vh;
     @extend %flex-enable-row;
     align-items: center;
     justify-content: center;

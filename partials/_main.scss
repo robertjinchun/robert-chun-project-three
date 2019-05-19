@@ -1,6 +1,6 @@
 main {
     background-color: $secondaryColor;
-    // height: 100vh;
+    height: 100vh;
     @extend %flex-enable-column;
     @extend %one-hundo-full;
     justify-content: center;
