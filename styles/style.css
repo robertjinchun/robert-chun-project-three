@@ -179,13 +179,13 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   overflow: hidden;
 }
 
-body, header div, main .required-keys, main .required-keys div, main .user-input-keys, main .user-input-keys div, main .countdown-timer, main .countdown-timer div {
+body, .dual-wrapper, header div, main .required-keys, main .required-keys div, main .user-input-keys, main .user-input-keys div, main .countdown-timer, main .countdown-timer div, main .start-reset {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-header, main, main .wrapper {
+header, main, main .main-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -195,13 +195,13 @@ header, main, main .wrapper {
           flex-direction: column;
 }
 
-body, header, main, main .required-keys, main .user-input-keys, main .countdown-timer, footer {
+body, .dual-wrapper, main, main .required-keys, main .user-input-keys, main .countdown-timer, main .start-reset, footer {
   width: 100%;
 }
 
-main .wrapper {
+header, main .main-wrapper {
   width: 100%;
-  max-width: 1600px;
+  max-width: 1000px;
 }
 
 h1,
@@ -218,6 +218,16 @@ html {
 }
 
 body {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dual-wrapper {
+  max-width: 2000px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -310,7 +320,7 @@ main {
           align-items: center;
 }
 
-main .wrapper {
+main .main-wrapper {
   border: 8px solid #d6694a;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -397,6 +407,16 @@ main .countdown-timer .user-timer {
   border: 10px solid #ba1f33;
 }
 
+main .start-reset {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .reset-game:hover {
+  background-color: #ba1f33;
+}
+
 main .start-game:hover {
   background-color: #ba1f33;
 }
@@ -413,8 +433,51 @@ footer {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  main .wrapper {
+  main .main-wrapper {
     margin-right: 0;
+  }
+  .dual-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 550px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    color: #353535;
+    font-size: 2rem;
+  }
+  h3 {
+    color: #353535;
+    font-size: 1.25rem;
+  }
+  h4 {
+    font-size: 1.25rem;
+  }
+  main .required-keys div {
+    width: 65px;
+    height: 65px;
+    border: 8px solid #ba1f33;
+  }
+  main .user-input-keys .user-typed-letter {
+    width: 65px;
+    height: 65px;
+    border: 7px solid #d6694a;
+  }
+  main .countdown-timer .user-score {
+    width: 65px;
+    height: 65px;
+    border: 8px solid #ba1f33;
+  }
+  main .countdown-timer .user-timer {
+    width: 65px;
+    height: 65px;
+    border: 8px solid #ba1f33;
   }
 }
 /*# sourceMappingURL=style.css.map */

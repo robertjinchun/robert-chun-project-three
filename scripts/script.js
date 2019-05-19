@@ -36,19 +36,36 @@ legendsType.timeCalc = function () {
         console.log(legendsType.totalPoints);
         // legendsType.totalPoints = 0;
         $('.start-game').show();
+        // $('.reset-game').show();
         //console.log()
     }
 }
 
 legendsType.start = function () {
     $('.start-game').on('click', function (event) {
+        setTimeout(function() {
         $('.start-game').hide();
+        // $('.reset-game').hide();
         legendsType.gameStart = true;
         legendsType.totalPoints = 0;
         $('.user-score').html(`<h2 class="">${legendsType.totalPoints}</h2>`);
         wordGen = legendsType.randomNumberGen();
         legendsType.currentIndividualLetterSplitter(legendsType.easyMode[wordGen]);
         legendsType.timeCalc();
+        }, 500);
+    })
+}
+
+legendsType.reset = function(){
+    $('.reset-game').on('click', function (event) {
+        $('.start-game').show();
+        legendsType.gameStart = false;
+        legendsType.totalPoints = 0;
+        legendsType.gameTime = 21;
+        $('.first-letter').css('border-color', '#ba1f33');
+        $('.second-letter').css('border-color', '#ba1f33');
+        $('.third-letter').css('border-color', '#ba1f33');
+        $('.fourth-letter').css('border-color', '#ba1f33');
     })
 }
 

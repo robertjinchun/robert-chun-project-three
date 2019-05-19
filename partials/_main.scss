@@ -6,14 +6,14 @@ main {
     justify-content: center;
     align-items: center;
 
-    .wrapper {
+    .main-wrapper {
         @extend %max-width-declaration;
         border: 8px solid $tertiaryColor;
         @extend %flex-enable-column;
         justify-content: center;
         align-items: center;
-        padding:3%;
-        margin-right:5%;
+        padding: 3%;
+        margin-right: 5%;
     }
 
     .required-keys {
@@ -88,6 +88,16 @@ main {
             border: 10px solid $quaternaryColor;
         }
 
+    }
+
+    .start-reset {
+        @extend %one-hundo-full;
+        @extend %flex-enable-row;
+        justify-content: space-between;
+    }
+
+    .reset-game:hover {
+        background-color: $quaternaryColor;
     }
 
     .start-game:hover {

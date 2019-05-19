@@ -2,9 +2,70 @@
     body {
         flex-direction: column;
     }
-    main{
-    .wrapper {
-        margin-right: 0;
+
+    main {
+        .main-wrapper {
+            margin-right: 0;
+        }
+    }
+
+    .dual-wrapper {
+        flex-direction: column;
     }
 }
+
+@media (max-width:550px) {
+    h1 {
+        // @extend %titleFont;
+        font-size: 4rem;
+
+    }
+
+    h2 {
+        color: $primaryColor;
+        font-size: 2rem;
+    }
+
+    h3 {
+        color: $primaryColor;
+        font-size: 1.25rem;
+    }
+
+    h4 {
+        font-size: 1.25rem;
+    }
+
+    main {
+        .required-keys {
+            div {
+                width: 65px;
+                height: 65px;
+                border: 8px solid $quaternaryColor;
+            }
+        }
+
+        .user-input-keys {
+            .user-typed-letter {
+                width: 65px;
+                height: 65px;
+                border: 7px solid $tertiaryColor;
+
+            }
+        }
+
+        .countdown-timer {
+            .user-score {
+                width: 65px;
+                height: 65px;
+                border: 8px solid $quaternaryColor;
+            }
+
+            .user-timer {
+                width: 65px;
+                height: 65px;
+                border: 8px solid $quaternaryColor;
+            }
+
+        }
+    }
 }

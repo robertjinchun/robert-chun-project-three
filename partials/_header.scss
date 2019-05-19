@@ -1,9 +1,11 @@
 header {
     background: linear-gradient(55deg, rgba(218, 224, 242, 1) 50%, rgba(151, 249, 249, 1) 50%);
-    
+
     height: 100vh;
+    // min-height:100%;
+    // min-height:;
     @extend %flex-enable-column;
-    @extend %one-hundo-full;
+    @extend %max-width-declaration;
     justify-content: center;
     align-items: center;
 

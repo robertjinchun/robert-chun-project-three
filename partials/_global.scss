@@ -13,7 +13,7 @@
 
 %max-width-declaration {
     width: 100%;
-    max-width: 1600px;
+    max-width: 1000px;
 }
 
 %titleFont {
@@ -26,6 +26,7 @@ $tertiaryColor:#d6694a;
 $quaternaryColor:#ba1f33;
 $quinaryColor:#efe9e7;
 $senaryColor:#81f499;
+
 html {
     font-size: 125%;
 }
@@ -33,6 +34,15 @@ html {
 
 body {
     @extend %one-hundo-full;
+    // min-height:600px;
+    @extend %flex-enable-row;
+    align-items: center;
+    justify-content: center;
+}
+
+.dual-wrapper {
+    @extend %one-hundo-full;
+    max-width:2000px;
     @extend %flex-enable-row;
     align-items: center;
     justify-content: center;
