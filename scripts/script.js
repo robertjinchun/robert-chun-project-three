@@ -44,24 +44,34 @@ legendsType.timeCalc = function () {
 legendsType.start = function () {
     $startGame.on('click', function (event) {
         $startGame.hide();
+        legendsType.gameStart = true;
+        legendsType.totalPoints = 0;
+        $('.user-score').html(`<h2 class="">${legendsType.totalPoints}</h2>`);
+        $firstLetter.css('border-color', '#ba1f33');
+        $secondLetter.css('border-color', '#ba1f33');
+        $thirdLetter.css('border-color', '#ba1f33');
+        $fourthLetter.css('border-color', '#ba1f33');
         $firstLetter.html(`<h2 class=""></h2>`);
         $secondLetter.html(`<h2 class=""></h2>`);
         $thirdLetter.html(`<h2 class=""></h2>`);
         $fourthLetter.html(`<h2 class=""></h2>`);
 
         setTimeout(function () {
-            legendsType.gameStart = true;
-            legendsType.totalPoints = 0;
-            $('.user-score').html(`<h2 class="">${legendsType.totalPoints}</h2>`);
-            $firstLetter.css('border-color', '#ba1f33');
-            $secondLetter.css('border-color', '#ba1f33');
-            $thirdLetter.css('border-color', '#ba1f33');
-            $fourthLetter.css('border-color', '#ba1f33');
+ 
             legendsType.wordGen = legendsType.randomNumberGen();
             legendsType.currentIndividualLetterSplitter(legendsType.easyMode[legendsType.wordGen]);
             legendsType.timeCalc();
         }, 500);
     })
+    $(window).keypress(function(event){
+        if (legendsType.gameStart === false && event.which === 13){
+            console.log("help");
+            $startGame.click();
+        }
+
+    })
+
+    
 }
 
 //I need a function to split each word of my array in to an array of chacters
