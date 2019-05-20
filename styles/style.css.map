@@ -8,7 +8,7 @@
         "../partials/_global.scss",
         "../partials/_header.scss",
         "../partials/_main.scss",
-        "../partials/_mediaQueries.scss"
+        "../partials/_media-queries.scss"
     ],
     "names": [],
     "file": "style.css"
