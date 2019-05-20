@@ -180,7 +180,13 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 body,
-.dual-wrapper, header div, main .required-keys, main .required-keys div, main .user-input-keys, main .user-input-keys div, main .countdown-timer, main .countdown-timer div, main .start-reset {
+.dual-wrapper,
+.start-reset,
+.required-keys,
+.user-input-keys,
+.countdown-timer, header div, main .required-keys div,
+main .user-input-keys div,
+main .countdown-timer div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -197,7 +203,11 @@ header, main, main .main-wrapper {
 }
 
 header, main .main-wrapper, body,
-.dual-wrapper, main, main .required-keys, main .user-input-keys, main .countdown-timer, main .start-reset, footer {
+.dual-wrapper,
+.start-reset,
+.required-keys,
+.user-input-keys,
+.countdown-timer, main {
   width: 100%;
 }
 
@@ -229,7 +239,13 @@ a {
 }
 
 body,
-.dual-wrapper {
+main,
+header,
+.dual-wrapper,
+.main-wrapper,
+.required-keys div,
+.user-input-keys div,
+.countdown-timer div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -312,172 +328,105 @@ h4 {
 header {
   background: linear-gradient(70deg, #dae0f2 50%, #97f9f9 50%);
   height: 100vh;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 main {
-  background-color: #97f9f9;
   height: 100vh;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  background-color: #97f9f9;
 }
 
 main .main-wrapper {
-  min-width: 320px;
   border: 8px solid #d6694a;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  min-width: 320px;
   padding: 3%;
   margin-right: 5%;
 }
 
-main .required-keys {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+main .required-keys,
+main .user-input-keys,
+main .countdown-timer {
   padding: 5% 0 5% 0;
 }
 
-main .required-keys div {
+main .required-keys div,
+main .user-typed-letter {
   width: 100px;
   height: 100px;
-  border: 10px solid #ba1f33;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+}
+
+main .required-keys {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+main .required-keys div {
+  border: 10px solid #ba1f33;
 }
 
 main .user-input-keys {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 5% 0 5% 0;
-}
-
-main .user-input-keys div {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 main .user-input-keys .user-typed-letter {
-  width: 100px;
-  height: 100px;
   margin-left: 2%;
   border: 10px solid #d6694a;
 }
 
-main .countdown-timer {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 5% 0 5% 0;
-}
-
-main .countdown-timer div {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-main .countdown-timer .user-score {
+main .countdown-timer .user-score,
+main .countdown-timer .user-timer {
   width: 120px;
   height: 120px;
   margin-right: 2%;
   border: 10px solid #ba1f33;
 }
 
-main .countdown-timer .user-timer {
-  width: 120px;
-  height: 120px;
-  margin-left: 2%;
-  border: 10px solid #ba1f33;
-}
-
-main .start-reset {
+main .start-reset,
+main .countdown-timer,
+main .required-keys {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-main .reset-game:hover {
-  background-color: #ba1f33;
 }
 
 main .start-game:hover {
   background-color: #ba1f33;
 }
 
-footer {
-  background-color: green;
-  height: 5vh;
-}
-
 @media (max-width: 1000px) {
-  body {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  header {
+    background: linear-gradient(45deg, #dae0f2 50%, #97f9f9 50%);
   }
-  main .main-wrapper {
-    margin-right: 0;
-  }
+  body,
   .dual-wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  main .main-wrapper {
+    margin-right: 0;
+  }
 }
 
 @media (max-width: 550px) {
-  header {
-    background: linear-gradient(70deg, #dae0f2 50%, #97f9f9 50%);
-  }
   h1 {
     font-size: 4rem;
   }
   h2 {
-    color: #353535;
     font-size: 2rem;
   }
   h3 {
-    color: #353535;
     font-size: 1.25rem;
   }
   h4 {
     font-size: 1.25rem;
   }
-  main .main-wrapper {
-    margin-right: 0;
-  }
-  main .required-keys div {
+  main .required-keys div,
+  main .countdown-timer .user-score,
+  main .countdown-timer .user-timer {
     width: 65px;
     height: 65px;
     border: 8px solid #ba1f33;
@@ -485,31 +434,18 @@ footer {
   main .user-input-keys .user-typed-letter {
     width: 65px;
     height: 65px;
-    border: 7px solid #d6694a;
-  }
-  main .countdown-timer .user-score {
-    width: 65px;
-    height: 65px;
-    border: 8px solid #ba1f33;
-  }
-  main .countdown-timer .user-timer {
-    width: 65px;
-    height: 65px;
-    border: 8px solid #ba1f33;
+    border: 8px solid #d6694a;
   }
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 1000px) and (orientation: landscape) {
-  /* CSS here */
   h1 {
     font-size: 4rem;
   }
   h2 {
-    color: #353535;
     font-size: 2rem;
   }
   h3 {
-    color: #353535;
     font-size: 1.25rem;
   }
   h4 {
@@ -518,33 +454,26 @@ footer {
   main .main-wrapper {
     margin-right: 0;
   }
-  main .required-keys {
-    padding: 1% 0 1% 0;
-  }
-  main .required-keys div {
-    width: 65px;
-    height: 65px;
-    border: 8px solid #ba1f33;
-  }
-  main .user-input-keys {
-    padding: 1% 0 1% 0;
-  }
-  main .user-input-keys .user-typed-letter {
-    width: 65px;
-    height: 65px;
-    border: 7px solid #d6694a;
-  }
+  main .required-keys,
+  main .user-input-keys,
   main .countdown-timer {
     padding: 1% 0 1% 0;
   }
-  main .countdown-timer .user-score {
-    width: 65px;
-    height: 65px;
-    border: 8px solid #ba1f33;
-  }
+  main .required-keys div,
+  main .user-input-keys .user-typed-letter,
+  main .countdown-timer .user-score,
   main .countdown-timer .user-timer {
     width: 65px;
     height: 65px;
+  }
+  main .required-keys div {
+    border: 8px solid #ba1f33;
+  }
+  main .user-input-keys .user-typed-letter {
+    border: 7px solid #d6694a;
+  }
+  main .countdown-timer .user-score,
+  main .countdown-timer .user-timer {
     border: 8px solid #ba1f33;
   }
 }

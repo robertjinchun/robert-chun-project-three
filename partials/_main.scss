@@ -1,99 +1,78 @@
+// The right side
 main {
-    background-color: $secondaryColor;
-    height: 100vh;
     @extend %flex-enable-column;
     @extend %one-hundo-full;
-    justify-content: center;
-    align-items: center;
-
+    height: 100vh;
+    background-color: $secondaryColor;
+    
+    // wrapper containing the content in the main element
     .main-wrapper {
-        min-width: 320px;
         @extend %max-width-declaration;
-        border: 8px solid $tertiaryColor;
         @extend %flex-enable-column;
-        justify-content: center;
-        align-items: center;
+        border: 8px solid $tertiaryColor;
+        min-width: 320px;
         padding: 3%;
         margin-right: 5%;
     }
 
-    .required-keys {
+    // flex row
+    .required-keys div,
+    .user-input-keys div,
+    .countdown-timer div {
         @extend %flex-enable-row;
-        @extend %one-hundo-full;
-        justify-content: space-between;
-        align-items: center;
-        padding: 5% 0 5% 0;
+    }
 
+    // Padding for elements in the main
+    .required-keys,
+    .user-input-keys,
+    .countdown-timer {
+        padding: 5% 0 5% 0;
+    }
+
+    // set height in px for keys required
+    .required-keys div,
+    .user-typed-letter {
+        width: 100px;
+        height: 100px;
+    }
+
+    // styling for required keys
+    .required-keys {
+        align-items: center;
         div {
-            width: 100px;
-            height: 100px;
             border: 10px solid $quaternaryColor;
-            @extend %flex-enable-row;
-            justify-content: center;
-            align-items: center;
         }
     }
 
+    // styling for input keys
     .user-input-keys {
-        @extend %flex-enable-row;
-        @extend %one-hundo-full;
         justify-content: center;
-        padding: 5% 0 5% 0;
-
-        div {
-            @extend %flex-enable-row;
-            justify-content: center;
-            align-items: center;
-
-        }
 
         .user-typed-letter {
-            width: 100px;
-            height: 100px;
             margin-left: 2%;
             border: 10px solid $tertiaryColor;
-
         }
     }
 
+    // styling for the timer
     .countdown-timer {
-        @extend %flex-enable-row;
-        @extend %one-hundo-full;
-        justify-content: space-between;
-        padding: 5% 0 5% 0;
-
-        div {
-            @extend %flex-enable-row;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .user-score {
+        .user-score,
+        .user-timer {
             width: 120px;
             height: 120px;
             margin-right: 2%;
             border: 10px solid $quaternaryColor;
         }
-
-        .user-timer {
-            width: 120px;
-            height: 120px;
-            margin-left: 2%;
-            border: 10px solid $quaternaryColor;
-        }
-
     }
 
-    .start-reset {
+    .start-reset,
+    .countdown-timer,
+    .required-keys {
         justify-content: space-between;
     }
 
-    .reset-game:hover {
-        background-color: $quaternaryColor;
-    }
-
+    // styling for the start button
     .start-game:hover {
         background-color: $quaternaryColor;
     }
 }
-

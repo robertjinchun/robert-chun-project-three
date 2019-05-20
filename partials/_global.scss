@@ -51,8 +51,13 @@ a {
 }
 
 body,
+main,
 header,
-.dual-wrapper {
+.dual-wrapper,
+.main-wrapper,
+.required-keys div,
+.user-input-keys div,
+.countdown-timer div {
     align-items: center;
     justify-content: center;
 
@@ -61,7 +66,10 @@ header,
 // centering content
 body,
 .dual-wrapper,
-.start-reset {
+.start-reset,
+.required-keys,
+.user-input-keys,
+.countdown-timer {
     @extend %one-hundo-full;
     @extend %flex-enable-row;
 }
@@ -92,8 +100,7 @@ h4 {
     text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
 }
 
-
-// Individual word styling
+// Individual H styling
 h1 {
     font-size: 6rem;
 
