@@ -323,6 +323,7 @@ main {
 }
 
 main .main-wrapper {
+  min-width: 320px;
   border: 8px solid #d6694a;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -464,6 +465,9 @@ footer {
   h4 {
     font-size: 1.25rem;
   }
+  main .main-wrapper {
+    margin-right: 0;
+  }
   main .required-keys div {
     width: 65px;
     height: 65px;
@@ -473,6 +477,56 @@ footer {
     width: 65px;
     height: 65px;
     border: 7px solid #d6694a;
+  }
+  main .countdown-timer .user-score {
+    width: 65px;
+    height: 65px;
+    border: 8px solid #ba1f33;
+  }
+  main .countdown-timer .user-timer {
+    width: 65px;
+    height: 65px;
+    border: 8px solid #ba1f33;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 1000px) and (orientation: landscape) {
+  /* CSS here */
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    color: #353535;
+    font-size: 2rem;
+  }
+  h3 {
+    color: #353535;
+    font-size: 1.25rem;
+  }
+  h4 {
+    font-size: 1.25rem;
+  }
+  main .main-wrapper {
+    margin-right: 0;
+  }
+  main .required-keys {
+    padding: 1% 0 1% 0;
+  }
+  main .required-keys div {
+    width: 65px;
+    height: 65px;
+    border: 8px solid #ba1f33;
+  }
+  main .user-input-keys {
+    padding: 1% 0 1% 0;
+  }
+  main .user-input-keys .user-typed-letter {
+    width: 65px;
+    height: 65px;
+    border: 7px solid #d6694a;
+  }
+  main .countdown-timer {
+    padding: 1% 0 1% 0;
   }
   main .countdown-timer .user-score {
     width: 65px;

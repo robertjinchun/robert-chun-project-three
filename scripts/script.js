@@ -112,13 +112,13 @@ legendsType.keyPressed = function () {
                 //console.log(legendsType.letterCounter);
 
                 if (legendsType.letterCounter === 1) {
-                    $('.first-letter').css('border-color', '#81f499');
+                    $('.first-letter').css('border-color', '#5b8266');
                 }
                 if (legendsType.letterCounter === 2) {
-                    $('.second-letter').css('border-color', '#81f499');
+                    $('.second-letter').css('border-color', '#5b8266');
                 }
                 if (legendsType.letterCounter === 3) {
-                    $('.third-letter').css('border-color', '#81f499');
+                    $('.third-letter').css('border-color', '#5b8266');
                 }
                 if (legendsType.letterCounter === 4) {
                     legendsType.totalPoints++;

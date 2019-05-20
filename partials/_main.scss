@@ -7,6 +7,8 @@ main {
     align-items: center;
 
     .main-wrapper {
+        min-width: 320px;
+        // height:100vh;
         @extend %max-width-declaration;
         border: 8px solid $tertiaryColor;
         @extend %flex-enable-column;
@@ -104,3 +106,4 @@ main {
         background-color: $quaternaryColor;
     }
 }
+
