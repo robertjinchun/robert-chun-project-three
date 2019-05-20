@@ -8,7 +8,6 @@ main {
 
     .main-wrapper {
         min-width: 320px;
-        // height:100vh;
         @extend %max-width-declaration;
         border: 8px solid $tertiaryColor;
         @extend %flex-enable-column;
@@ -24,7 +23,6 @@ main {
         justify-content: space-between;
         align-items: center;
         padding: 5% 0 5% 0;
-        // border: 3px solid black;
 
         div {
             width: 100px;
@@ -33,7 +31,6 @@ main {
             @extend %flex-enable-row;
             justify-content: center;
             align-items: center;
-            // @extend %one-hundo-full;
         }
     }
 
@@ -42,7 +39,6 @@ main {
         @extend %one-hundo-full;
         justify-content: center;
         padding: 5% 0 5% 0;
-        // border: 3px solid black;
 
         div {
             @extend %flex-enable-row;
@@ -65,15 +61,11 @@ main {
         @extend %one-hundo-full;
         justify-content: space-between;
         padding: 5% 0 5% 0;
-        // border: 3px solid red;
 
         div {
-            // width: 300px;
-            // height: 100px;
             @extend %flex-enable-row;
             justify-content: center;
             align-items: center;
-            // border: 3px solid blue;
         }
 
         .user-score {
@@ -93,8 +85,6 @@ main {
     }
 
     .start-reset {
-        @extend %one-hundo-full;
-        @extend %flex-enable-row;
         justify-content: space-between;
     }
 

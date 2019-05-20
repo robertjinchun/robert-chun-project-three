@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- 2019- 05- 20.  -->
+<!-- Things to note: -->
+<!-- 1. Need to add a reset button  -->
+<!-- 2. Need to add a help button  -->
+<!-- 3. Would like to add sounds and animation, however, it seems pretty clean as it is.  -->
+<!-- 4. All screens are accounted for, however, if you try to play in mobile, it doesnt work because keyboard inputs on mobile are not counted as keyboard press downs -->
+
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
@@ -12,15 +19,16 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
-
+<!-- The body -->
 <body>
+    <!-- The wrapper that contains both header and main to display side by side -->
+    <!-- Div required to center everything -->
     <div class='dual-wrapper'>
-
-
         <header>
             <!-- Section including the header -->
             <section>
                 <div>
+                    <!-- The h1 title covered in a span to create a wave effect -->
                     <h1><span class='typeTitle1'>T</span>
                         <span class='typeTitle2'>Y</span>
                         <span class='typeTitle3'>P</span>
@@ -28,16 +36,13 @@
                         <br />
                         <span class='cursiveTitle'>A lot</span></h1>
                 </div>
-                <!-- <div>
-                <ul>
-                    <li class='first-help'></li>
-                    <li class='second-help'></li>
-                    <li class='third-help'></li>
-                </ul>
-            </div> -->
             </section>
         </header>
+        <!-- Header ends -->
+
+        <!-- Main starts -->
         <main>
+            <!-- Wrapper needed to center content -->
             <div class='main-wrapper'>
                 <!-- Section containing individual letters that need to be typed-->
                 <section class='required-keys'>
@@ -63,7 +68,8 @@
 
                     </div>
                 </section>
-                <!-- This section is the timer count down -->
+                <!-- This section has some divs containing the users score and timer -->
+                <!-- Also contains the button to start the game -->
                 <section class='countdown-timer'>
                     <div>
                         <div class='user-total-score'>
@@ -78,39 +84,25 @@
                             <h3>Timer</h3>
                         </div>
                         <div class='user-timer'>
-
                         </div>
                     </div>
-
                 </section>
                 <section class='start-reset'>
-                    <!-- <button class='start-game'>start</button> -->
-                    <!-- <div class='reset-game'>
-                    <h4>RESET</h4>
-                </div> -->
                     <div class='start-game'>
                         <h4>START</h4>
                     </div>
-
-
-                    <!-- <div>
-                        <i class="far fa-question-circle"></i>
-                    </div> -->
-
-
-                    <!-- <button class='reset'>reset</button> -->
                 </section>
+                <!--  -->
             </div>
-            <!-- <div><i class="far fa-question-circle"></i></div> -->
-
         </main>
-        <!-- <footer>
+        <!-- Main ends -->
 
-    </footer> -->
+        <!-- Javascript Jquery Magic enters here -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
         </script>
+        <!-- My javascript code runs here -->
         <script src="./scripts/script.js"></script>
     </div>
 </body>
-
+<!-- Body ends here -->
 </html>

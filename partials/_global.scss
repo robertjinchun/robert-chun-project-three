@@ -1,55 +1,41 @@
+// PLACE HOLDERS
+// just Flex
 %flex-enable-row {
     display: flex;
 }
 
+// flex and column
 %flex-enable-column {
     display: flex;
     flex-direction: column;
 }
 
+// Just for 100% height
 %one-hundo-full {
     width: 100%;
 }
 
+// wrapper containing width and max-width
 %max-width-declaration {
-    width: 100%;
+    @extend %one-hundo-full;
     max-width: 1000px;
 }
 
+// The main font declaration
 %titleFont {
     font-family: 'Montserrat', sans-serif;
 }
 
-$primaryColor:#353535;
-$secondaryColor:#97f9f9;
-$tertiaryColor:#d6694a;
-$quaternaryColor:#ba1f33;
-$quinaryColor:#efe9e7;
-$senaryColor:#5b8266;
+// VARIABLES
+/* Color Declaration */
+$primaryColor:#353535; //text
+$secondaryColor:#97f9f9; //background
+$tertiaryColor:#d6694a; //alt Color 2
+$quaternaryColor:#ba1f33; //alt Color 1
+$quinaryColor:#efe9e7; // off white color
+$senaryColor:#5b8266; //border color change
 
-html {
-    font-size: 125%;
-}
-
-
-body {
-    @extend %one-hundo-full;
-    // min-height: 1000px;
-    @extend %flex-enable-row;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(90deg, rgba(218, 224, 242, 1) 50%, rgba(151, 249, 249, 1) 50%);
-}
-
-.dual-wrapper {
-    @extend %one-hundo-full;
-    max-width: 2000px;
-    // height: 100vh;
-    @extend %flex-enable-row;
-    align-items: center;
-    justify-content: center;
-}
-
+// stripping default settings, adding color and fonts
 h1,
 h2,
 h3,
@@ -64,8 +50,51 @@ a {
     list-style-type: none;
 }
 
+body,
+header,
+.dual-wrapper {
+    align-items: center;
+    justify-content: center;
+
+}
+
+// centering content
+body,
+.dual-wrapper,
+.start-reset {
+    @extend %one-hundo-full;
+    @extend %flex-enable-row;
+}
+
+h2,
+h3,
+h4 {
+    color: $primaryColor;
+}
+
+// sets the basic font to 20px
+html {
+    font-size: 125%;
+}
+
+// the body of the program
+body {
+    background: linear-gradient(90deg, rgba(218, 224, 242, 1) 50%, rgba(151, 249, 249, 1) 50%);
+}
+
+// text-shadow application
+.typeTitle1,
+.typeTitle2,
+.typeTitle3,
+.typeTitle4,
+.cursiveTitle,
+h4 {
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+}
+
+
+// Individual word styling
 h1 {
-    // @extend %titleFont;
     font-size: 6rem;
 
     .typeTitle1,
@@ -73,13 +102,12 @@ h1 {
     .typeTitle3,
     .typeTitle4 {
         color: $quaternaryColor;
-        text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
         display: inline-block;
     }
 
+    // not really cursive but kept the name
     .cursiveTitle {
         color: $tertiaryColor;
-        text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
     }
 
     .typeTitle2 {
@@ -96,19 +124,17 @@ h1 {
 }
 
 h2 {
-    color: $primaryColor;
     font-size: 4rem;
 }
 
 h3 {
-    color: $primaryColor;
     font-size: 2rem;
 }
 
 h4 {
     font-size: 3.5rem;
-    color: $primaryColor;
-    // text-shadow: 10px 10px 0px #ba1f33, 5px 5px 0px #d6694a;
-    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+}
 
+.dual-wrapper {
+    max-width: 2000px;
 }
