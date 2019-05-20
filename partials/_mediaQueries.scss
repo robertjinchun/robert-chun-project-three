@@ -49,7 +49,7 @@
 }
 
 // for screens that are in landscape and are really narrow
-@media only screen and (min-device-width : 320px) and (max-device-width : 800px) and (orientation : landscape) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 1000px) and (orientation : landscape) {
     h1 {
         font-size: 4rem;
     }
