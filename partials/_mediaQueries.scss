@@ -1,3 +1,4 @@
+// For screens that are less than 1000 px
 @media (max-width:1000px) {
     header {
         background: linear-gradient(45deg, rgba(218, 224, 242, 1) 50%, rgba(151, 249, 249, 1) 50%);
@@ -15,6 +16,7 @@
     }
 }
 
+// For screens that are less than 550px
 @media (max-width:550px) {
     h1 {
         font-size: 4rem;
@@ -36,24 +38,29 @@
 
         .required-keys div,
         .countdown-timer .user-score,
-        .countdown-timer .user-timer {
+        .countdown-timer .user-timer,
+        .user-input-keys .user-typed-letter {
             width: 65px;
             height: 65px;
-            border: 8px solid $quaternaryColor;
+        }
+
+        .required-keys div,
+        .countdown-timer .user-score,
+        .countdown-timer .user-timer {
+            border: 8px solid $quaternary-color;
         }
 
         .user-input-keys {
             .user-typed-letter {
-                width: 65px;
-                height: 65px;
-                border: 8px solid $tertiaryColor;
+                border: 8px solid $tertiary-color;
             }
         }
 
     }
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 1000px) and (orientation : landscape) {
+// for screens that are in landscape and are really narrow
+@media only screen and (min-device-width : 320px) and (max-device-width : 800px) and (orientation : landscape) {
     h1 {
         font-size: 4rem;
     }
@@ -89,25 +96,17 @@
             height: 65px;
         }
 
-        .required-keys {
-            div {
-                border: 8px solid $quaternaryColor;
-            }
+        .required-keys div,
+        .countdown-timer .user-score,
+        .countdown-timer .user-timer {
+            border: 8px solid $quaternary-color;
+
         }
 
         .user-input-keys {
-
             .user-typed-letter {
-                border: 7px solid $tertiaryColor;
+                border: 7px solid $tertiary-color;
             }
-        }
-
-        .countdown-timer {
-            .user-score,
-            .user-timer {
-                border: 8px solid $quaternaryColor;
-            }
-
         }
     }
 }

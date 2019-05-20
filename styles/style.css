@@ -269,11 +269,11 @@ body {
   background: linear-gradient(90deg, #dae0f2 50%, #97f9f9 50%);
 }
 
-.typeTitle1,
-.typeTitle2,
-.typeTitle3,
-.typeTitle4,
-.cursiveTitle,
+.type-title-1,
+.type-title-2,
+.type-title-3,
+.type-title-4,
+.cursive-title,
 h4 {
   text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
 }
@@ -282,29 +282,29 @@ h1 {
   font-size: 6rem;
 }
 
-h1 .typeTitle1,
-h1 .typeTitle2,
-h1 .typeTitle3,
-h1 .typeTitle4 {
+h1 .type-title-1,
+h1 .type-title-2,
+h1 .type-title-3,
+h1 .type-title-4 {
   color: #ba1f33;
   display: inline-block;
 }
 
-h1 .cursiveTitle {
+h1 .cursive-title {
   color: #d6694a;
 }
 
-h1 .typeTitle2 {
+h1 .type-title-2 {
   -webkit-transform: translatey(20px);
           transform: translatey(20px);
 }
 
-h1 .typeTitle3 {
+h1 .type-title-3 {
   -webkit-transform: translatey(-10px);
           transform: translatey(-10px);
 }
 
-h1 .typeTitle4 {
+h1 .type-title-4 {
   -webkit-transform: translatey(25px);
           transform: translatey(25px);
 }
@@ -426,19 +426,22 @@ main .start-game:hover {
   }
   main .required-keys div,
   main .countdown-timer .user-score,
-  main .countdown-timer .user-timer {
-    width: 65px;
-    height: 65px;
-    border: 8px solid #ba1f33;
-  }
+  main .countdown-timer .user-timer,
   main .user-input-keys .user-typed-letter {
     width: 65px;
     height: 65px;
+  }
+  main .required-keys div,
+  main .countdown-timer .user-score,
+  main .countdown-timer .user-timer {
+    border: 8px solid #ba1f33;
+  }
+  main .user-input-keys .user-typed-letter {
     border: 8px solid #d6694a;
   }
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 800px) and (orientation: landscape) {
   h1 {
     font-size: 4rem;
   }
@@ -466,15 +469,13 @@ main .start-game:hover {
     width: 65px;
     height: 65px;
   }
-  main .required-keys div {
+  main .required-keys div,
+  main .countdown-timer .user-score,
+  main .countdown-timer .user-timer {
     border: 8px solid #ba1f33;
   }
   main .user-input-keys .user-typed-letter {
     border: 7px solid #d6694a;
-  }
-  main .countdown-timer .user-score,
-  main .countdown-timer .user-timer {
-    border: 8px solid #ba1f33;
   }
 }
 /*# sourceMappingURL=style.css.map */

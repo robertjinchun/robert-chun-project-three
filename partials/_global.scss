@@ -22,18 +22,16 @@
 }
 
 // The main font declaration
-%titleFont {
+%title-font {
     font-family: 'Montserrat', sans-serif;
 }
 
 // VARIABLES
 /* Color Declaration */
-$primaryColor:#353535; //text
-$secondaryColor:#97f9f9; //background
-$tertiaryColor:#d6694a; //alt Color 2
-$quaternaryColor:#ba1f33; //alt Color 1
-$quinaryColor:#efe9e7; // off white color
-$senaryColor:#5b8266; //border color change
+$primary-color:#353535; //text
+$secondary-color:#97f9f9; //background
+$tertiary-color:#d6694a; //alt Color 2
+$quaternary-color:#ba1f33; //alt Color 1
 
 // stripping default settings, adding color and fonts
 h1,
@@ -44,8 +42,8 @@ p,
 a {
     margin: 0;
     padding: 0;
-    color: $secondaryColor;
-    @extend %titleFont;
+    color: $secondary-color;
+    @extend %title-font;
     text-decoration: none;
     list-style-type: none;
 }
@@ -77,7 +75,7 @@ body,
 h2,
 h3,
 h4 {
-    color: $primaryColor;
+    color: $primary-color;
 }
 
 // sets the basic font to 20px
@@ -91,11 +89,11 @@ body {
 }
 
 // text-shadow application
-.typeTitle1,
-.typeTitle2,
-.typeTitle3,
-.typeTitle4,
-.cursiveTitle,
+.type-title-1,
+.type-title-2,
+.type-title-3,
+.type-title-4,
+.cursive-title,
 h4 {
     text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
 }
@@ -104,28 +102,28 @@ h4 {
 h1 {
     font-size: 6rem;
 
-    .typeTitle1,
-    .typeTitle2,
-    .typeTitle3,
-    .typeTitle4 {
-        color: $quaternaryColor;
+    .type-title-1,
+    .type-title-2,
+    .type-title-3,
+    .type-title-4 {
+        color: $quaternary-color;
         display: inline-block;
     }
 
     // not really cursive but kept the name
-    .cursiveTitle {
-        color: $tertiaryColor;
+    .cursive-title {
+        color: $tertiary-color;
     }
 
-    .typeTitle2 {
+    .type-title-2 {
         transform: translatey(20px);
     }
 
-    .typeTitle3 {
+    .type-title-3 {
         transform: translatey(-10px);
     }
 
-    .typeTitle4 {
+    .type-title-4 {
         transform: translatey(25px);
     }
 }

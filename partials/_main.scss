@@ -3,13 +3,13 @@ main {
     @extend %flex-enable-column;
     @extend %one-hundo-full;
     height: 100vh;
-    background-color: $secondaryColor;
-    
+    background-color: $secondary-color;
+
     // wrapper containing the content in the main element
     .main-wrapper {
         @extend %max-width-declaration;
         @extend %flex-enable-column;
-        border: 8px solid $tertiaryColor;
+        border: 8px solid $tertiary-color;
         min-width: 320px;
         padding: 3%;
         margin-right: 5%;
@@ -39,8 +39,9 @@ main {
     // styling for required keys
     .required-keys {
         align-items: center;
+
         div {
-            border: 10px solid $quaternaryColor;
+            border: 10px solid $quaternary-color;
         }
     }
 
@@ -50,18 +51,19 @@ main {
 
         .user-typed-letter {
             margin-left: 2%;
-            border: 10px solid $tertiaryColor;
+            border: 10px solid $tertiary-color;
         }
     }
 
     // styling for the timer
     .countdown-timer {
+
         .user-score,
         .user-timer {
             width: 120px;
             height: 120px;
             margin-right: 2%;
-            border: 10px solid $quaternaryColor;
+            border: 10px solid $quaternary-color;
         }
     }
 
@@ -73,6 +75,6 @@ main {
 
     // styling for the start button
     .start-game:hover {
-        background-color: $quaternaryColor;
+        background-color: $quaternary-color;
     }
 }
