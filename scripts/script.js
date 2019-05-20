@@ -57,7 +57,6 @@ legendsType.start = function () {
         $fourthLetter.html(`<h2 class=""></h2>`);
 
         setTimeout(function () {
- 
             legendsType.wordGen = legendsType.randomNumberGen();
             legendsType.currentIndividualLetterSplitter(legendsType.easyMode[legendsType.wordGen]);
             legendsType.timeCalc();
@@ -65,13 +64,9 @@ legendsType.start = function () {
     })
     $(window).keypress(function(event){
         if (legendsType.gameStart === false && event.which === 13){
-            console.log("help");
             $startGame.click();
         }
-
     })
-
-    
 }
 
 //I need a function to split each word of my array in to an array of chacters
